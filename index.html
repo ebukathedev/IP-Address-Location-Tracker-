@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/8ae1a4bc49.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>IP Address Location Tracker</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>IP Address Location Tracker</h1>
+			<form>
+				<span>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</span>
+				<input
+					type="text"
+					placeholder="Enter any IP Address"
+					inputmode="search"
+				/>
+			</form>
+			<div class="img-wrapper">
+				<img class="hide-for-large" src="wave1.svg" alt="wave" />
+				<img class="hide-for-small" src="wave3.svg" alt="wave" />
+			</div>
+		</header>
+
+			<section class="info-wrapper">
+				<div class="info">
+					<h3 class="section-tile"
+						><span>Details for your IP</span></h3
+					>
+					<ul class="main-list">
+						<li class="item1">
+							<div class="title">IP Address</div>
+							<div class="value">105.111.123.140</div>
+						</li>
+						<li class="item2">
+							<div class="title">IP Type</div>
+							<div class="value">IPv4</div>
+						</li>
+						<li class="item2">
+							<div class="title">Continent</div>
+							<div class="value">Africa</div>
+						</li>
+						<li class="item3">
+							<div class="title">Country</div>
+							<div class="value">Nigeria</div>
+						</li>
+						<li class="item3">
+							<div class="title">Capital</div>
+							<div class="value">Abuja</div>
+						</li>
+						<li class="item4">
+							<div class="title">Region</div>
+							<div class="value">Lagos</div>
+						</li>
+						<li class="item5">
+							<div class="title">City</div>
+							<div class="value">Lagos</div>
+						</li>
+						<li class="item2">
+							<div class="title">ISP</div>
+							<div class="value">Airtel Networks Limited</div>
+						</li>
+					</ul>
+					<div class="img-wrapper">
+						<img class="hide-for-large" src="wave2.svg" alt="wave" />
+						<img class="hide-for-small wave3" src="wave3.svg" alt="wave" />
+					</div>
+				</div>
+			</section>
+			<section class="map-wrapper">
+				<div class="map">
+					<h3 class="section-tile"><span>Map</span></h3>
+					<div id="map"></div>
+				</div>
+			</section>
+	</body>
+</html>
