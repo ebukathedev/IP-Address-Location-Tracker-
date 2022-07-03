@@ -26,10 +26,12 @@
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</span>
 				<input
+          id="input"
 					type="text"
 					placeholder="Enter any IP Address"
 					inputmode="search"
 				/>
+        <input type="submit" hidden>
 			</form>
 			<div class="img-wrapper">
 				<img class="hide-for-large" src="wave1.svg" alt="wave" />
@@ -40,40 +42,40 @@
 			<section class="info-wrapper">
 				<div class="info">
 					<h3 class="section-tile"
-						><span>Details for your IP</span></h3
+						><span id>Details for your IP</span></h3
 					>
 					<ul class="main-list">
 						<li class="item1">
 							<div class="title">IP Address</div>
-							<div class="value">105.111.123.140</div>
+							<div id="ip" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item2">
 							<div class="title">IP Type</div>
-							<div class="value">IPv4</div>
+							<div id="ip-type" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item2">
 							<div class="title">Continent</div>
-							<div class="value">Africa</div>
+							<div id="continent" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item3">
 							<div class="title">Country</div>
-							<div class="value">Nigeria</div>
+							<div id="country" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item3">
 							<div class="title">Capital</div>
-							<div class="value">Abuja</div>
+							<div id="capital" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item4">
 							<div class="title">Region</div>
-							<div class="value">Lagos</div>
+							<div id="region" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item5">
 							<div class="title">City</div>
-							<div class="value">Lagos</div>
+							<div id="city" class="value skeleton skeleton-text"></div>
 						</li>
 						<li class="item2">
 							<div class="title">ISP</div>
-							<div class="value">Airtel Networks Limited</div>
+							<div id="isp" class="value skeleton skeleton-text"></div>
 						</li>
 					</ul>
 					<div class="img-wrapper">
@@ -85,8 +87,9 @@
 			<section class="map-wrapper">
 				<div class="map">
 					<h3 class="section-tile"><span>Map</span></h3>
-					<div id="map"></div>
+					<div id="map" class="skeleton"></div>
 				</div>
 			</section>
+      <script src="main.js"></script>
 	</body>
 </html>
