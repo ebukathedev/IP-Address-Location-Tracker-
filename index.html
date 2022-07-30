@@ -33,7 +33,7 @@
 				/>
 				<input type="submit" hidden />
 			</form>
-			<p id="error-msg" class="disappear">"10.0.1.1 is either not valid or it is a private IP address"</p>
+			<p id="error-msg"></p>
 
 			<div class="img-wrapper">
 				<img class="hide-for-large" src="wave1.svg" alt="wave" />
@@ -118,6 +118,12 @@
 				<div id="map" class="skeleton"></div>
 			</div>
 		</section>
-		<script src="main.js"></script>
+
+		<script src="index.js"></script>
+		<!-- <script src="main.js"></script> -->
+		<script
+			async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap"
+		></script>
 	</body>
 </html>

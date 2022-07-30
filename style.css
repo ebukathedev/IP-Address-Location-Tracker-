@@ -11,7 +11,7 @@
 	--light-purple-gradient: linear-gradient(to bottom right, #f8c3f8, #96b5ff);
 	--input-bg: #efcef4;
 	--gray: #808080;
-	--error: rgb(255, 35, 35);
+	--error: rgb(241, 30, 30);
 }
 
 * {
@@ -59,19 +59,6 @@ h1 {
 	color: var(--error);
 	letter-spacing: 2px;
 	
-}
-
-.disappear {
-	animation: disappear 5s;
-}
-
-@keyframes disappear {
-	form {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
 }
 
 form {
