@@ -18,8 +18,11 @@ const elements = [ip, ipType, continent, country, capital, region, city, isp];
 // url to fetch data from
 const url = "http://ipwho.is/";
 
-// Indicates wether the IP address entered in th form is the user IP
+// Indicates whether the IP address entered in th form is the user IP
 let isUserIP;
+
+// Indicates whether user IP address has changed
+let newUserIP;
 
 // Display data from API 
 const fillInValues = (...values) => {
@@ -33,10 +36,6 @@ const toggleSKeletons = () => {
     skeleton.classList.toggle("skeleton")
     skeleton.classList.toggle("skeleton-text")
   })
-}
-
-const yoo = (examp) => {
-  console.log(examp);
 }
 
 const loadThenDisplay = (data) => {
@@ -71,13 +70,20 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!localStorage.getItem('isUserIP')) {
         localStorage.setItem("isUserIP", data.ip);
       }
+      
+      newUserIP = data.ip;
     });
 })
 
 isUserIP = localStorage.getItem('isUserIP');
 
-// Show information about the IP address of whatever IP is entered in the form 
+// If a fetch request is made and the IP of the user is changed then we want to update this variable and the local storage
+if(newUserIP !== isUserIP) {
+  isUserIP = newUserIP;
+  localStorage.setItem('isUserIP', newUserIP)
+}
 
+// Show information about the IP address of whatever IP is entered in the form 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -89,9 +95,9 @@ form.addEventListener("submit", (e) => {
   let urlForIPAddressEntered = url + inputValue;
 
   // Change details title
-  if (isUserIP !== inputValue) {
-    details.innerText = "Details for the IP entered";
-  } else details.innerText = "Details for your IP";
+  if (isUserIP === inputValue) {
+    details.textContent = "Details for your IP";
+  } else details.textContent = "Details for the IP entered";
 
   // fetch data
   fetch(urlForIPAddressEntered)
@@ -101,7 +107,7 @@ form.addEventListener("submit", (e) => {
       toggleSKeletons()
       loadThenDisplay(data)
     })
-  
+
 
   input.value = "";
 });
