@@ -1,129 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap"
-			rel="stylesheet"
-		/>
-		<script
-			src="https://kit.fontawesome.com/8ae1a4bc49.js"
-			crossorigin="anonymous"
-		></script>
-		<link rel="stylesheet" href="style.css" />
-		<title>IP Address Location Tracker</title>
-	</head>
 
-	<body>
-		<header>
-			<h1>IP Address Location Tracker</h1>
-			<form>
-				<span>
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</span>
-				<input
-					id="input"
-					type="text"
-					placeholder="Enter any IP Address"
-					inputmode="search"
-				/>
-				<input type="submit" hidden />
-			</form>
-			<p id="error-msg"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/8ae1a4bc49.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>IP Address Location Tracker</title>
+</head>
 
-			<div class="img-wrapper">
-				<img class="hide-for-large" src="wave1.svg" alt="wave" />
-				<img class="hide-for-small" src="wave3.svg" alt="wave" />
-			</div>
-		</header>
+<body>
+  <header>
+    <h1>IP Address Location Tracker</h1>
+    <form>
+      <span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </span>
+      <input id="input" type="text" placeholder="Enter any IP Address" inputmode="search" />
+      <input type="submit" hidden />
+    </form>
+    <p id="error-msg"></p>
+    <div class="img-wrapper">
+      <img class="hide-for-large" src="wave1.svg" alt="wave" />
+      <img class="hide-for-small" src="wave3.svg" alt="wave" />
+    </div>
+  </header>
+  <section class="info-wrapper">
+    <div class="info">
+      <h3 class="section-tile">
+        <span id="details">Details for your IP</span>
+      </h3>
+      <ul class="main-list">
+        <li class="item1">
+          <div class="title">IP Address</div>
+          <div id="ip" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item2">
+          <div class="title">IP Type</div>
+          <div id="ip-type" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item2">
+          <div class="title">Continent</div>
+          <div id="continent" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item3">
+          <div class="title">Country</div>
+          <!-- <div id="flag" class="value skeleton skeleton-text"></div> -->
+          <div id="country" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item3">
+          <div class="title">Capital</div>
+          <div id="capital" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item4">
+          <div class="title">Region</div>
+          <div id="region" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item5">
+          <div class="title">City</div>
+          <div id="city" class="value skeleton skeleton-text"></div>
+        </li>
+        <li class="item2">
+          <div class="title">ISP</div>
+          <div id="isp" class="value skeleton skeleton-text"></div>
+        </li>
+      </ul>
+      <div class="img-wrapper">
+        <img class="hide-for-large" src="wave2.svg" alt="wave" />
+        <img class="hide-for-small wave3" src="wave3.svg" alt="wave" />
+      </div>
+    </div>
+  </section>
+  <section class="map-wrapper">
+    <div class="map">
+      <h3 class="section-tile"><span>Map</span></h3>
+      <div id="map" class="skeleton"></div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+  <!-- <script src="main.js"></script> -->
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap">
+    </script> -->
+</body>
 
-		<section class="info-wrapper">
-			<div class="info">
-				<h3 class="section-tile">
-					<span id="details">Details for your IP</span>
-				</h3>
-				<ul class="main-list">
-					<li class="item1">
-						<div class="title">IP Address</div>
-						<div id="ip" class="value skeleton skeleton-text"></div>
-					</li>
-					<li class="item2">
-						<div class="title">IP Type</div>
-						<div
-							id="ip-type"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item2">
-						<div class="title">Continent</div>
-						<div
-							id="continent"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item3">
-						<div class="title">Country</div>
-						<!-- <div id="flag" class="value skeleton skeleton-text"></div> -->
-						<div
-							id="country"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item3">
-						<div class="title">Capital</div>
-						<div
-							id="capital"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item4">
-						<div class="title">Region</div>
-						<div
-							id="region"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item5">
-						<div class="title">City</div>
-						<div
-							id="city"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-					<li class="item2">
-						<div class="title">ISP</div>
-						<div
-							id="isp"
-							class="value skeleton skeleton-text"
-						></div>
-					</li>
-				</ul>
-				<div class="img-wrapper">
-					<img class="hide-for-large" src="wave2.svg" alt="wave" />
-					<img
-						class="hide-for-small wave3"
-						src="wave3.svg"
-						alt="wave"
-					/>
-				</div>
-			</div>
-		</section>
-		<section class="map-wrapper">
-			<div class="map">
-				<h3 class="section-tile"><span>Map</span></h3>
-				<div id="map" class="skeleton"></div>
-			</div>
-		</section>
-
-		<script src="index.js"></script>
-		<!-- <script src="main.js"></script> -->
-		<script
-			async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap"
-		></script>
-	</body>
 </html>
