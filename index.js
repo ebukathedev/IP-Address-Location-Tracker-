@@ -16,7 +16,7 @@ const form = document.querySelector("form"),
 const elements = [ip, ipType, continent, country, capital, region, city, isp];
 
 // url to fetch data from
-const url = "http://ipwho.is/";
+const url = "https://ipwho.is/";
 
 // Indicates whether the IP address entered in th form is the user IP
 let isUserIP;
