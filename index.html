@@ -16,36 +16,30 @@
 		></script>
 		<link rel="stylesheet" href="style.css" />
 		<title>IP Address Location Tracker</title>
+		<script src="index.js" defer></script>
 	</head>
 
 	<body>
 		<header>
 			<h1>IP Address Location Tracker</h1>
 			<form>
-				<div class="search-group">
-					<span>
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</span>
-					<input
-						id="input"
-						type="text"
-						placeholder="Enter any IP Address"
-						inputmode="search"
-					/>
-				</div>
-				
-				<div id="error-box">
-					<div id="error-msg">The IP address is not valid</div>
-				</div>
+				<span>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</span>
+				<input
+					id="input"
+					type="text"
+					placeholder="Enter any IP Address"
+					inputmode="search"
+				/>
 				<input type="submit" hidden />
 			</form>
-
+			<p id="error-msg"></p>
 			<div class="img-wrapper">
 				<img class="hide-for-large" src="wave1.svg" alt="wave" />
 				<img class="hide-for-small" src="wave3.svg" alt="wave" />
 			</div>
 		</header>
-
 		<section class="info-wrapper">
 			<div class="info">
 				<h3 class="section-tile">
@@ -123,12 +117,8 @@
 				<div id="map" class="skeleton"></div>
 			</div>
 		</section>
-
-		<script src="index.js"></script>
 		<!-- <script src="main.js"></script> -->
-		<script
-			async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap"
-		></script>
+		<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap">
+    </script> -->
 	</body>
 </html>
