@@ -62,8 +62,7 @@ h1 {
 
 form {
 	display: flex;
-	/* align-items: center; */
-	flex-direction: column;
+	align-items: center;
 	gap: 1rem;
 	padding: 1rem;
 	margin: auto;
@@ -83,7 +82,7 @@ form {
 	background-color: var(--input-bg);
 }
 
-form .search-group input {
+form input {
 	border: none;
 	outline: none;
 	flex: 1;
