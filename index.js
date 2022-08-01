@@ -91,7 +91,7 @@ form.addEventListener("submit", (e) => {
   const input = document.querySelector("#input");
   let inputValue = document.querySelector("#input").value;
 
-  // fetch url for IP address enteted in the form
+  // fetch url for IP address entered in the form
   let urlForIPAddressEntered = url + inputValue;
 
   // Change details title
