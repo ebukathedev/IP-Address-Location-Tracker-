@@ -52,10 +52,9 @@ h1 {
 	font-family: "Montserrat", sans-serif;
 }
 
+
 #error-msg {
 	font-size: 0.875rem;
-	margin: 1rem auto 0;
-	text-align: center;
 	color: var(--error);
 	letter-spacing: 2px;
 	
@@ -63,7 +62,8 @@ h1 {
 
 form {
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
+	flex-direction: column;
 	gap: 1rem;
 	padding: 1rem;
 	margin: auto;
@@ -73,11 +73,17 @@ form {
 	max-width: 400px;
 }
 
-form:focus-within {
+.search-group {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.search-group:focus-within {
 	background-color: var(--input-bg);
 }
 
-form input {
+form .search-group input {
 	border: none;
 	outline: none;
 	flex: 1;
@@ -220,10 +226,6 @@ img.hide-for-small {
 	header {
 		display: grid;
 		place-content: center;
-	}
-
-	#error-msg {
-		text-align: left;
 	}
 
 	form {

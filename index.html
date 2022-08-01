@@ -22,18 +22,23 @@
 		<header>
 			<h1>IP Address Location Tracker</h1>
 			<form>
-				<span>
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</span>
-				<input
-					id="input"
-					type="text"
-					placeholder="Enter any IP Address"
-					inputmode="search"
-				/>
+				<div class="search-group">
+					<span>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</span>
+					<input
+						id="input"
+						type="text"
+						placeholder="Enter any IP Address"
+						inputmode="search"
+					/>
+				</div>
+				
+				<div id="error-box">
+					<div id="error-msg">The IP address is not valid</div>
+				</div>
 				<input type="submit" hidden />
 			</form>
-			<p id="error-msg"></p>
 
 			<div class="img-wrapper">
 				<img class="hide-for-large" src="wave1.svg" alt="wave" />
