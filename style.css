@@ -52,12 +52,43 @@ h1 {
 	font-family: "Montserrat", sans-serif;
 }
 
-
 #error-msg {
-	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1rem;
 	color: var(--error);
-	letter-spacing: 2px;
-	
+	padding: 0.5rem;
+	margin: 1rem auto;
+	background-color: var(--white);
+	border-radius: 10px;
+	box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.288);
+	width: fit-content;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+#error-msg span {
+	font-size: 0.75rem;
+}
+
+#flag-wrapper {
+	display: flex;
+	gap: 0.5rem;
+}
+
+#flag img {
+	height: 22px;
+}
+
+#country + div {
+	color: blue;
+}
+
+.show {
+	visibility: visible;
+	opacity: 1;
 }
 
 form {

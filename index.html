@@ -34,7 +34,13 @@
 				/>
 				<input type="submit" hidden />
 			</form>
-			<p id="error-msg"></p>
+			<div id="error-msg">
+				<i class="fa-solid fa-circle-exclamation"></i>
+				<span
+					>Input is either invalid or it is a private address.<br />Please
+					try a different address</span
+				>
+			</div>
 			<div class="img-wrapper">
 				<img class="hide-for-large" src="wave1.svg" alt="wave" />
 				<img class="hide-for-small" src="wave3.svg" alt="wave" />
@@ -46,54 +52,53 @@
 					<span id="details">Details for your IP</span>
 				</h3>
 				<ul class="main-list">
-					<li class="item1">
+					<li>
 						<div class="title">IP Address</div>
 						<div id="ip" class="value skeleton skeleton-text"></div>
 					</li>
-					<li class="item2">
+					<li>
 						<div class="title">IP Type</div>
 						<div
 							id="ip-type"
 							class="value skeleton skeleton-text"
 						></div>
 					</li>
-					<li class="item2">
+					<li>
 						<div class="title">Continent</div>
 						<div
 							id="continent"
 							class="value skeleton skeleton-text"
 						></div>
 					</li>
-					<li class="item3">
+					<li>
 						<div class="title">Country</div>
-						<!-- <div id="flag" class="value skeleton skeleton-text"></div> -->
-						<div
-							id="country"
-							class="value skeleton skeleton-text"
-						></div>
+						<div id="flag-wrapper" class="value skeleton skeleton-text">
+							<span id="flag"></span>
+							<span id="country"></span>
+						</div>
 					</li>
-					<li class="item3">
+					<li>
 						<div class="title">Capital</div>
 						<div
 							id="capital"
 							class="value skeleton skeleton-text"
 						></div>
 					</li>
-					<li class="item4">
+					<li>
 						<div class="title">Region</div>
 						<div
 							id="region"
 							class="value skeleton skeleton-text"
 						></div>
 					</li>
-					<li class="item5">
+					<li>
 						<div class="title">City</div>
 						<div
 							id="city"
 							class="value skeleton skeleton-text"
 						></div>
 					</li>
-					<li class="item2">
+					<li>
 						<div class="title">ISP</div>
 						<div
 							id="isp"
@@ -117,8 +122,5 @@
 				<div id="map" class="skeleton"></div>
 			</div>
 		</section>
-		<!-- <script src="main.js"></script> -->
-		<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrk-cVfaVrIwnNbVWPGGZsDTtgF_O8E74&callback=initMap">
-    </script> -->
 	</body>
 </html>
