@@ -122,6 +122,10 @@ form span {
 	color: var(--gray);
 }
 
+form:focus-within {
+  background-color: var(--purple-white)
+}
+
 .img-wrapper {
 	position: absolute;
 	bottom: 0;
