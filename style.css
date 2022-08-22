@@ -213,12 +213,18 @@ h3 span::after {
   margin-bottom: 1rem;
 }
 
-.map-link a {
+.map-wrapper a {
   color: var(--purple);
   text-decoration: underline;
 }
 img.hide-for-small {
 	display: none;
+}
+
+.attribution {
+  text-align: center;
+  font-weight:bold;
+  margin: 3rem 0 0;
 }
 
 .skeleton {
