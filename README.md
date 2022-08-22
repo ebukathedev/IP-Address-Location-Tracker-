@@ -38,7 +38,7 @@ Here's what I learnt from all the struggle.
 - how to think
 
 ## Conclusion
-Anyways I'm glad to be finally fone with this. Now I can move on to something more complex.
+Anyways I'm glad to be finally done with this. Now I can move on to something more complex.
 
 I feel like this Readme is more of blog post than a documentation 😂. 
 
