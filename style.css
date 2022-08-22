@@ -38,11 +38,6 @@ header {
 	padding-bottom: 7rem;
 }
 
-h1,
-form {
-	position: relative;
-	z-index: 2;
-}
 
 h1 {
 	text-align: center;
@@ -79,6 +74,7 @@ h1 {
 
 #flag img {
 	height: 22px;
+	border-radius: 3px
 }
 
 #country + div {
