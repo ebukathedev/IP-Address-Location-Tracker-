@@ -26,9 +26,9 @@ So in this project I utilised the use of three APIs namely:
   - They have many tiles to choose from.
  
 ## What I learnt from this
-If I say I didn't struggle at all while building this project the I would be lying. There were up an down moments. 
+If I say I didn't struggle at all while building this project then I would be lying. There were ups and down moments. 
 
-Here's is what I learnt from all the struggle.
+Here's what I learnt from all the struggle.
 
 - How to use the Rest and Spread operators
 - The only way I could get the value of a global variable in fetch or any asynchronous code was if I passed it in a function and usesd it in the function.
