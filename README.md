@@ -6,7 +6,7 @@ A simple tracker that displays information about an IP address and shows the loc
 
 ## Description
 
-The project is aimed at me helping me getting familiar with working with external APIs. 
+The project was aimed at me helping me getting familiar with working with external APIs. 
 
 So in this project I utilised the use of three APIs namely:
 - [IPWHOIS](https://ipwhois.io/)
